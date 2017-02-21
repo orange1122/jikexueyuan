@@ -1,0 +1,8 @@
+body,ul{margin:0;padding:0;}
+#box{ width:480px; margin:20px auto 0;}
+#box ul{overflow:hidden;}
+#box ul li{width:156px;line-height:28px;float:left;background:#999;border:1px solid #ccc;color:#333;text-align:center;font-size:16px;list-style:none; margin-right:1px;}
+#box div{height:400px;background:#333;line-hight:200px;font-size:180px;color:#fff;text-align:center;display:none;}
+#box ul .active{background:#333;color:#fff; }
+
+

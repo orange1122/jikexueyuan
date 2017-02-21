@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>盒子模型</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.xiezi{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		.xiehe{
+			margin:auto;
+			padding: 10px;
+			height: 100px;
+			width: 100px;
+			background-color: green;
+			border:5px solid red;
+			margin-top: 50px;
+			margin-bottom: 50px;
+
+		}
+		.xiezi1{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		.xiehe1{
+			margin:auto;
+			padding: 10px;
+			height: 130px;
+			width: 130px;
+			background-color: green;
+			border:5px solid red;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			box-sizing: border-box;
+
+		}
+	</style>
+</head>
+<body>
+<!-- 正常盒子与怪异盒子对比例子 -->
+<!-- 标准盒子模型 -->
+	<div class="xiehe">
+		<div class="xiezi"></div>
+	</div>
+	<hr>
+<!-- 怪异盒模型 -->
+	<div class="xiehe1">
+		<div class="xiezi1"></div>
+	</div>
+	<hr>
+</body>
+</html>

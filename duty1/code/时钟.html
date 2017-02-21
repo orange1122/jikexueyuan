@@ -1,0 +1,41 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>时钟</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		function toDouble(num){
+		if(num<10){
+		return '0'+num;
+		}else{
+		return ''+num;
+		}
+	}
+
+		
+		
+		var span = document.getElementById("span1")
+		function a(){
+			var date = new Date();
+			span.innerHTML=date.getHours()+":"+toDouble(date.getMinutes())+":"+toDouble(date.getSeconds());
+		}
+		
+		setInterval(a,1000);
+		a();
+		
+
+	}
+	</script>
+</head>
+<body>
+<span id="span1"></span>
+<input id="input" type="text" style="width:500px; font-size: 30px; height:40px; line-height:40px; " />
+<img src="imgaes/0.png" alt="0" />
+<img src="imgaes/0.png" alt="0" />
+<img src="imgaes/0.png" alt="0" />
+<img src="imgaes/0.png" alt="0" />
+<img src="imgaes/0.png" alt="0" />
+<img src="imgaes/0.png" alt="0" />
+</body>
+</html>

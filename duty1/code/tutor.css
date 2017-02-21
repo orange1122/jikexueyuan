@@ -1,0 +1,113 @@
+body{
+	background-color: rgb(13,119,146);
+	margin:0;
+}
+/*上部分*/
+.content{
+	width: 710px;
+	height: auto;
+	margin:auto;
+	background-color: #FFFFFF;
+	border-radius: 30px;
+}
+.head div a:hover{
+	color: black;
+}
+.head img{
+	width: 180px;
+	height: 76px;
+}
+.head div{
+
+	float: right;
+	padding-top: 60px;
+	padding-right: 30px;
+}
+
+.head a.img{
+
+	padding-left: 30px;
+}
+.head div a{
+	text-decoration: none;
+	color: #FF0099;
+	font-size: 12px;
+	padding-left: 5px;
+}
+.main caption h2{
+	font-size: 18px;
+	font-weight: bold;
+}
+/*主体部分*/
+font{
+	color:#FF0000;
+}
+a font{
+	color: blue;
+}
+table{
+	width: 640px;
+	margin:auto;
+	border: 1px solid #cccccc;
+	border-collapse:collapse ;
+	font-size: 12px;
+}
+table thead tr th{
+	font-size: 12px;
+	line-height: 18px;
+	/*vertical-align: middle;*/
+	border: 1px solid #cccccc;	
+	font-weight: normal;
+}
+table tbody tr td{
+	border: 1px solid #cccccc;		
+}
+table tbody tr td:first-child{
+	width: 140px;
+	text-align: right;
+	font-size: 12px;
+}
+table tbody span{
+	color: blue;
+	font-size: 12px;
+	line-height: 18px;
+}
+#tr1,#tr2,#tr3{
+	text-align: left;
+	background-color: #EEEEEE;	
+	color: #003399;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 19.5px;
+	padding-left: 10px;
+}
+
+table tbody tr td input{
+	width: 210px;
+}
+#object input{
+	width: 13px;
+	font-size: 12px;
+}
+#area,#teachmode{
+	width: 13px;	
+	font-size: 12px;
+}
+/*结尾部分*/
+#submit{
+	width: 86px;
+	height: 22px;
+
+	margin-right: 280px;
+}
+footer span{
+	color: #666666;
+	font-size:12px;
+	display: block;
+	text-align: center;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+footer font{
+	color: black;
+}

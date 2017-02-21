@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>测试</title>
+	<style type="text/css">
+	#box{ width:100px; height:100px; background:blue; position:absolute; }
+	#divBox div { position:absolute; width:10px; height:10px; background:orange;  }
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var getBox=document.getElementById("divBox");
+		var getHtml="";
+		for(var i=0;i<10;i++){
+			getHtml+="<div></div>";
+		}
+		getBox.innerHTML=getHtml;
+		document.onmousemove=function(ev){
+			var e =ev||event;
+			var getId=document.getElementById("divBox");
+			var alldiv = getId.getElementsByTagName('div');
+			console.info(alldiv.length)
+			for(var i=alldiv.length-1;i>0;i--){
+				alldiv[i].style.left= alldiv[i-1].style.left;
+				alldiv[i].style.top= alldiv[i-1].style.top;
+			}
+			alldiv[0].style.left = e.clientX;
+			alldiv[0].style.top = e.clientY;
+		}
+
+		
+
+
+	}
+	</script>
+</head>
+<body>
+	<!-- <div id="box"></div> -->
+	<!-- <input type="text" id="txt1"> -->
+	<div id="divBox"></div>
+</form>
+</body>
+</html>

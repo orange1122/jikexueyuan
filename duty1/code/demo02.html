@@ -1,0 +1,68 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>奇偶变色表格</title>
+	<style type="text/css">
+	.red{
+
+	background: red;
+	}
+	.green{
+	background-color:green;
+	}
+	</style>
+	
+	<script type="text/javascript">
+	window.onload=function(){
+		var tr = document.getElementsByTagName("tr");
+		/*tr.addEventListener("mouseover",function(){
+			for(i=0;i<tr.length;i++){
+				if(i%2==0){
+					tr[i].className="red";
+				}else{
+					tr[i].className="green";
+				}
+			}
+
+		},false);*/ //错误写法
+		for(var i=0;i<tr.length;i++){
+			if(i%2==0){
+				tr[i].addEventListener("mouseover",function(){
+					this.className="red";
+				},false)
+				tr[i].addEventListener("mouseout",function(){
+					this.className="";
+				 },false)
+			}else{
+				tr[i].addEventListener("mouseover",function(){
+					this.className="green";
+				},false)
+				 tr[i].addEventListener("mouseout",function(){
+				 	this.className="";
+				 },false)
+			}
+		}
+
+	}
+	</script>
+	
+</head>
+<body>
+
+	<table border="1" cellspacing="0" width="200px" cellpadding="10">
+		<tr bgcolor="orange">
+			<td>apple</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>banana</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>orange</td>
+			<td>5</td>
+		</tr>
+	</table>
+</body>
+</html>

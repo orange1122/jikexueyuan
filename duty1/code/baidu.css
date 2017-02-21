@@ -1,0 +1,218 @@
+body{
+	font:12px arial;
+	margin:0;
+	padding:0;
+	position: relative;
+	min-width: 810px;
+	min-height: 610px;
+}
+
+.container{
+	/*min-width: 800px;*/
+}
+/*百度首页导航栏*/
+header{
+	overflow: hidden;
+	margin-top:30px;
+	
+}
+
+header nav{
+	width: 450px;
+	float: right;
+	/*margin-top:5px;*/
+}
+
+header nav a{
+	font-size:13px ;
+	margin-left: 13px;
+	color: #333;
+
+
+}
+
+header nav #product:hover ~ a,#hidden span{
+	display: block;
+
+}
+header nav #product:hover{
+	background-color: #FFFFFF;
+	color: black;
+}
+header nav .productor{
+	margin-top: -36px;
+	width: 85px;
+	position: absolute;
+	right:0;
+}
+header nav .productor #product{
+	padding-bottom: 5px;
+}
+header nav .productor a{
+	display: block;
+	padding-top: 21px;
+	text-align: center;
+	border:  1px solid #f0f0f0;
+
+}
+
+header nav a.mnva{
+	
+	font-weight: 700;
+
+}
+header nav .productor a span{
+	margin: auto;
+}
+#product{
+	margin-top: 14px;
+	padding-top: 5px;
+	background-color: #3385ff;
+	font-size: 13px;
+	color: #FFFFFF;
+}
+header nav .productor #hidden{
+	display: none;
+}
+.bdbriimgitem_3{
+	display: none;
+	width: 44px;
+	height: 30px;
+	background-image: url(img/music.png);
+	
+}
+.bdbriimgitem_4{
+	display: none;
+	width: 34px;
+	height: 38px;
+	background-image: url(img/picture.png);
+}
+.bdbriimgitem_2{
+	display: none;
+	width: 41px;
+	height: 37px;
+	background-image: url(img/know.png);
+}
+.bdbriimgitem_5{
+	display: none;
+	width: 37px;
+	height: 42px;
+	background-image: url(img/doc.png);	
+}
+.bdbriimgitem_6{
+	display: none;
+	width: 40px;
+	height: 36px;
+	background-image: url(img/list.png);		
+}
+/*.productor{
+	margin-top: 20px;
+	float: right
+}*/
+/*中间搜索部分*/
+.content{
+	width: 650px;
+	text-align: center;
+	height: 250px;
+	margin:0 auto;
+}
+/*.content img{
+	padding-left: 350px\0;
+	padding-right: 350px\9\0;
+
+}*/
+.content #con{
+	width:100%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 36px;
+	height: 40px;
+}
+.content #con div{
+	float: left;
+}
+
+.content span{
+	display: block;
+	float: left;
+	border:1px solid #cccccc;
+	height: 36px;
+}
+.content span #imgcamera{
+	background-image: url(img/12.png);
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 16px;
+	float: right;
+	display: block;
+	margin-top: 10px;
+	padding-right: 10px;
+	border:0px;
+}
+.content span #imgcamera:hover{
+	background-image: url(img/14.png);
+}
+
+.content input{
+	border:0px;
+	width: 518px;
+	height: 34px;
+	outline: none;
+}
+
+.content button{
+	width:100px;
+	height: 37px;
+	color: #fff;
+	background-color: #3385ff;
+	border-width: 0px;
+	font-size: 15px;
+}
+/*百度结尾部分*/
+footer  {
+	position: absolute;
+	bottom: 50px;
+	left:0;
+	right: 0;
+
+}
+footer #qrcode{
+	width: 780px;
+	height: 100px;
+	margin:auto;
+}
+footer  #qrcode .qrcode-item1,.qrcode-item2,#ftconw{
+	float: left;
+}
+footer #qrcode .qrcode-item1 div{
+	float: left;
+}
+
+footer #qrcode .qrcode-item2 div{
+	float: left;
+}
+.qrcode-text{
+	width: 52px;
+	height: 46px;
+	line-height: 23px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#qrcode .qrcode-item1,.qrcode-item2,#ftconw{
+	padding-left: 30px;
+}
+#qrcode .qrcode-item1{
+	padding-left:75px;
+}
+#qrcode .qrcode-item1,.qrcode-item2{
+	padding-top: 15px;
+}
+footer  p,a{
+	font-size: 12px;
+	 color: #808080;
+	 
+}
+footer .firstp{
+	word-spacing: 13px;
+}
+

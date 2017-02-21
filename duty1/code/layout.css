@@ -1,0 +1,64 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	min-width: 810px;
+}
+.header{
+	background-color: #ccc;
+	height: 100px;
+	/*水平垂直居中*/
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+}
+.article{
+	background-color: #ccc;
+	overflow: hidden;/*隐藏多余显示*/
+	min-height: 600px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+.footer{
+	background-color: #ccc;
+	height:100px;
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+}
+.middle{
+	background-color:#fff;
+	float:left;
+	width: 100%;
+	/*等高处理*/
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+
+}
+.left{
+	background-color: #ccc;
+	width:150px;
+	float:left;
+	margin-left: -100%;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+.right{
+	background-color: #ccc;
+	width: 150px;
+	float:left;
+	margin-left: -150px;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+.inner{
+	background-color: #ccc;
+	/*中间留白*/
+	margin-left: 160px;
+	margin-right: 160px;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+
+}

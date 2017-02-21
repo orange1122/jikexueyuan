@@ -1,0 +1,32 @@
+body{
+	background:url(image/bg.png) repeat;
+}
+.head p{
+	font-size: 14px;
+}
+.container{
+	margin-top: 150px;
+	width: 350px;
+}
+.head{
+	text-align: center;
+}
+.checkbox{
+	height: 20px;
+}
+.checkbox label{
+	float: left;
+}
+.form-control-static{
+	float: right;
+}
+a{
+	text-decoration:none;
+}
+.col-md-4{
+	background-color: green;
+}
+.col-md-8{
+	background-color: green;
+}
+

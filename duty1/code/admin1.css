@@ -1,0 +1,126 @@
+
+.col-md-10{
+width:1150px;
+}
+.con{
+	width: 1352px;
+}
+img{
+	margin-left: 44px;
+}
+p{
+	color: #5E6472;
+	margin-left: 20px;
+	margin-bottom: 12px;
+}
+a{
+	color: #5E6472;
+}
+.nav{
+	background-color: #3D4A5D;
+	height: 33px;
+	padding-left:920px;
+}
+.nav p{
+	color:#fff;
+
+}
+.nav img{
+	margin-left:12px;
+	margin-bottom: 6px;
+}
+.app  img,p{
+	display: inline-block;
+	margin-left: 2px;
+}
+.app{
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.logo{
+	height: 100px;
+	background-color: #212733;
+	text-align:center;
+}
+.logo img{
+	display: block;
+	margin-left: 0;
+	margin:0 auto;
+}
+.logo p{
+	margin-top: 5px;
+	font-size: 18px;
+	font-weight: 900;
+}
+.application{
+	height: 120px;
+	background-color: #2A303E;
+	
+}
+.clent{
+	height: 140px;
+	background-color: #2A303E;
+}
+.admin{
+	height: 285px;
+	background-color: #2A303E;
+}
+.main{
+	width: 1150px;
+	height: 612px;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	background-color: #EEEFF3;
+}
+p:first-child{
+	margin-top: 10px;
+	margin-left: 15px;
+	font-size: 16px;
+}
+.table{
+	border:1px solid #ddd;
+	margin-bottom: 20px;
+	background-color: #D9E0E8;
+	
+}
+.table tr td{
+	text-align: right;
+	
+}
+.table tr td:first-child{
+	text-align: left;
+	padding-left: 30px;
+}
+#manager{
+	padding-left: 20px;
+}
+.main-nav{
+	height: 30px;
+	background-color:  #EEEFF3;
+	text-align: right;
+
+}
+.main-nav img{
+	margin-right: 15px;
+	margin-top: 5px;
+}
+.main-nav span{
+	margin-left: 20px;
+	margin-top: 5px;
+	font-size: 15px;
+	font-weight:900;
+	float:left;
+
+}
+
+.application div:hover{
+	background-color: #3B3E4D;
+}
+.clent div:hover{
+	background-color: #3B3E4D;
+}
+.admin div:hover{
+	background-color: #3B3E4D;
+}

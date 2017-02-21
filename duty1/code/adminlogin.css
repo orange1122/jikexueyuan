@@ -1,0 +1,49 @@
+.container{
+	margin-top: 100px;
+}
+
+[class*="col-"]{
+	height: 40px;
+		background-color: #eee;
+		border:1px solid #ddd;
+	}
+
+.col-md-4{
+	height: 200px;
+	position: relative;
+}
+.col-md-4 img{
+	position: absolute;
+	top: 6px;
+	left: 15px;
+}
+.col-md-4 p{
+	position: absolute;
+	top: 7px;
+	left: 50px;
+}
+#col-md-4{
+	height: 40px;
+}
+#row2 img{
+	top: 30px;
+	left: 40px;
+}
+.form-horizontal{
+/*	position: absolute;*/
+	/*right: 0px;*/
+	margin-left:150px;
+
+	
+}
+.form-control{
+
+}
+#imgb{
+	margin-left: 164px;
+	margin-top: -20px;
+}
+#imgc{
+	margin-left: 150px;
+	margin-top: 24px;
+}

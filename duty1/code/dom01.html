@@ -1,0 +1,47 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>js案例</title>
+	<style type="text/css">
+		.red{
+	background-color:"red";
+	}
+	.green{
+	background-color:"green";
+	}
+	
+	</style>
+	<script type="text/javascript">
+
+	function clickall(){
+		
+		var dom = document.getElementById("input");
+		console.info(dom)
+		var doms = document.getElementsByName("producter");
+		console.info(doms)
+		for(i=0;i<doms.length;i++){
+			doms[i].checked=dom.checked;
+		}
+
+			
+		
+		
+	}
+	window.onload=function(){
+		document.getElementById("input").addEventListener("click",function(){
+			clickall();
+		},false);
+
+
+	}
+
+	</script>
+</head>
+<body>
+	<input id="input"  type="checkbox" >全选
+	<input type="checkbox" name="producter">电脑
+	<input type="checkbox" name="producter">手机
+	<input type="checkbox" name="producter">空调
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>ceshi</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		document.getElementById("butt").addEventListener("click",function(){
+			alert('nodetype:'+this.nodeType);//nodeType=1 
+			alert('nodeName:'+this.nodeName); 
+			alert('nodeValue:'+this.nodeValue); //null 
+			alert('element:'+this); 
+		},false);
+	}
+	</script>
+	<style type="text/css">
+		.a{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+		.b{
+			width: 100px;
+			height: 100px;
+			background-color:green;
+		}
+		.c{
+			width: 100px;
+			height: 100px;
+			background-color:yellow;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="h1">你好</h1>
+	<input type="button" id="butt" value="按钮" style="color: red">
+	<a href="">123</a>
+	<div class="a"></div>
+	<div class="b"></div>
+	<div class="c"></div>
+</body>
+</html>

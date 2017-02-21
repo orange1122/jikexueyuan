@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>form</title>
+	<!-- <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css"> -->
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap.css">
+
+
+</head>
+<body>
+	
+	<form role="form" class="form-inline" >
+		<div class="form-group">
+			<label for="" class="sr-only">email</label>
+			<input type="email" class="form-control" placeholder="enter email">
+		</div>
+		<div class="form-group">
+			<label for="" class="sr-only">password</label>
+			<input type="password" class="form-control" placeholder="enter  password">
+		</div>
+		<div class="form-group">
+			<label for="">file</label>
+			<input type="file" >
+			<p class="help-block">选择你输入的文件</p>
+		</div>
+	</form>
+
+	<form role="form" class="form-horizontal">
+	<div class="form-group">
+	<label class="col-sm-1 control-label">user</label>
+	<div class="col-sm-11">
+	<input type="text"  placeholder="user" class="form-control">
+	</div>
+	
+	</div>
+	<div class="form-group">
+	<label  class="col-sm-1 control-label">password</label>
+	<div class="col-sm-11">
+	<input type="password"  placeholder="password" class="form-control">
+	</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-offset-1 col-sm-11">
+			<input type="checkbox">记住密码
+		</div>
+	</div>
+	<div class="form-group">
+	<div class="col-sm-11 col-sm-offset-1">
+		<button type="submit" class="btn btn-danger">submit</button>
+	</div>
+	</div>
+	</form>
+
+	<div class="form-group has-success has-feedback">
+		<label class="control-label" for="inputSuccess2">Input with success</label>
+		<input type="text" class="form-control" id="inputSuccess2">
+		<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+	</div>
+	<div class="form-group has-warning has-feedback">
+		<label class="control-label" for="inputWarning2">Input with warning</label>
+		<input type="text" class="form-control" id="inputWarning2">
+		<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+	</div>
+	<div class="form-group has-error has-feedback">
+		<label class="control-label" for="inputError2">Input with error</label>
+		<input type="text" class="form-control" id="inputError2">
+		<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+	</div>
+
+<form class="form-horizontal" role="form">
+  <div class="form-group has-success has-feedback">
+    <label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="inputSuccess3">
+      <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+  </div>
+</form>
+
+	
+</body>
+</html>

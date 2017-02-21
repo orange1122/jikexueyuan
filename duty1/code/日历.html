@@ -1,0 +1,76 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>日历</title>
+	<style type="text/css">
+		*{ margin:0px; padding:0px; list-style:none; }
+        .zbox { width:280px; height:300px;  margin:50px auto; background:#999; padding:20px 20px 0 20px;  }
+        #zbu li { width:50px; height:45px; padding-top:5px; color:#fff; text-align:center; background:#666; float:left; margin:10px; }
+        #zbd { width:250px; margin-left:10px; height:50px; clear:both; background:#666; color:Orange; padding:10px 0 0 10px; }
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		 var array = ["一一一", "二二二", "三三三", "四四四", "五五五", "六六六", "七七七", "八八八", "九九九", "十十十", "十一十一十一", "十二十二十二"];
+		var ul=document.getElementsByTagName('ul')[0];
+		var li = ul.getElementsByTagName("li");
+		console.info(li[0].innerHTML.substring(0,1))
+		var h3 =document.getElementsByTagName('h3')[0];
+		var p =document.getElementsByTagName('p')[0];
+		var i=0;
+		for(var i=0;i<li.length;i++){
+			li[i].num=i;
+			li[i].addEventListener("mouseover",function(){
+				for(i=0;i<li.length;i++){
+					li[i].style.color="#fff";
+					li[i].style.background="#666";
+				}
+				this.style.color="#333";
+				this.style.background="#fff";
+				if(i<=8){
+					var num = this.innerHTML.substring(0,1);
+				}else{
+					var num = this.innerHTML.substring(0,2);
+				}
+				
+				//var oldnum =h3.value.substring(0,1);
+				h3.innerHTML="";
+				h3.innerHTML=this.num+1+"月";
+				//console.info(num)
+				p.innerHTML="";
+				p.innerHTML=array[this.num];
+
+				
+
+			},false);
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="zbox">
+    <ul id="zbu">
+        <li style=" color:#333; background:#fff; ">1<br />一</li>
+        <li>2<br />二</li>
+        <li>3<br />三</li>
+        <li>4<br />四</li>
+        <li>5<br />五</li>
+        <li>6<br />六</li>
+        <li>7<br />七</li>
+        <li>8<br />八</li>
+        <li>9<br />九</li>
+        <li>10<br />十</li>
+        <li>11<br />十一</li>
+        <li>12<br />十二</li>
+    </ul>
+    <div id="zbd">
+        <h3>
+            12月
+        </h3>
+        <p>
+            秒味不让我去学。
+        </p>
+    </div>
+</div>
+</body>
+</html>

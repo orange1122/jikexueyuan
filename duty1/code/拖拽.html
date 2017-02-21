@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>拖拽</title>
+	<style type="text/css">
+		#div1 {width:100px; height:100px; background:red; cursor:pointer; position:absolute;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var  getdiv =document.getElementById("div1");
+		var disX=0;
+		var disY=0;
+		getdiv.onmousedown=function(ev){
+			var e =ev||event;
+			disX=e.clientX-getdiv.offsetLeft;
+			disY=e.clientY-getdiv.offsetTop;
+			
+
+		document.onmousemove=function(ev){
+			var e =ev||event;
+			var ll=e.clientX-disX;
+			var tt=e.clientY-disY;
+
+			getdiv.style.left=ll;
+			getdiv.style.top=tt;
+
+
+		}
+		document.onmouseup=function(){
+			 document.onmousemove=function(){
+			 	return false;
+			 };//document.onmousemove=null;去掉鼠标移动事件
+			//document.onmouseup=null;//去掉鼠标向上的事件
+		}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		
+	</div>
+</body>
+</html>

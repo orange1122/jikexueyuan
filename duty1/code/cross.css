@@ -1,0 +1,53 @@
+body{
+	position: relative;
+	
+	}
+
+div{
+	height: 100px;
+	width: 100px;
+	}
+
+/*阴影*/
+.content div{
+	box-shadow:1px 2px 5px 3px #6C6C6C;
+	}
+
+.one{
+	background: orange;
+	margin:auto;
+	}
+
+.two{
+	background: blue;
+	float: left;		
+	}
+
+.three{
+	background-image: url(img/13.png);
+	background-repeat: space;
+	background-position: center;
+	float: left;	
+	}
+
+.four{
+	background: green;
+	float: left;			
+	}
+
+.five{
+	background: #6F00D2;
+	clear: both;
+	margin:auto;
+	}
+	
+.content{
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+	}

@@ -1,0 +1,59 @@
+</!DOCTYPE html>
+<html>
+<head charset="">
+	<meta charset="utf-8">
+	<title>轮播</title>
+</head>
+ <style type="text/css">
+	ul,ol,body{margin:0;padding:0;}
+	li{list-style:none;}
+	img{border:none;}
+	#box{width:490px;height:170px;position:relative;overflow:hidden; margin:30px auto;}
+	#box ul{position:absolute;left:0;top:0;}
+	#box ul img,#box ul a{display:block;}
+	#box ol{width:125px;position:absolute;right:10px;bottom:10px}
+	#box ol li{width:20px;height:20px;text-align:center;background:#FFF;opacity:0.6;filter:alpha(opacity=60);line-height:20px;color:#FF6600;font-size:12px;float:left;margin-left:5px;display:inline;}
+	#box ol .show{background:#FF6600;color:#fff;opacity:1;filter:alpha(opacity=100);}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var div =document.getElementById("box");
+		var ol =  div.getElementsByTagName('ol')[0];
+		var li =ol.getElementsByTagName('li');
+		var ul = div.getElementsByTagName('ul')[0];
+		var iheight =div.offsetHeight;
+		console.info(iheight)
+		console.info(ul.style.top)
+		for(i=0;i<li.length;i++){
+			li[i].index=i;
+			li[i].addEventListener("mouseover",function(){
+				for(i=0;i<li.length;i++){
+					li[i].className="";
+				}
+				this.className="show";
+				ul.style.top=-(this.index*iheight);
+				console.info(ul.style.top)
+
+			},false)
+		}
+	}
+</script>
+<body>
+	<div id="box">
+	<ul>
+		<li><img src="img/1.png" /></li>
+		<li><img src="img/2.jpg" /></li>
+		<li><img src="img/3.jpg" /></li>
+		<li><img src="img/4.jpg" /></li>
+		<li><img src="img/5.png" /></li>
+	</ul>
+	<ol>
+		<li class="show">1</li><!--0   -0*170 -->
+		<li>2</li><!-- -170   -1*170 -->
+		<li>3</li><!-- -340   -2*170 -->
+		<li>4</li><!--510   -3*170 -->
+		<li>5</li>
+	</ol>
+</div>
+</body>
+</html>

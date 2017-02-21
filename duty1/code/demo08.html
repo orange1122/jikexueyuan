@@ -1,0 +1,66 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+    <meta charset="utf-8">
+	<title>斑马线</title>
+	<style type="text/css">
+	*{ margin:0px; padding:0px; list-style:none; }
+     .zbox { width:58px; margin:100px auto; }
+      #zboxp { width:55px; height:24px; line-height:24px; padding-left:3px; background:red; }
+      #ul1 { width:56px; border:1px solid #9a99ff;   }
+      #ul1 li { cursor:pointer; margin-top:10px;  }
+      #addid{ background:#000; }
+      .addClass{ background:#000; }
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var p = document.getElementById("zboxp");
+		var ul = document.getElementById("ul1");
+		var li = ul.getElementsByTagName('li');
+		function change(){
+			for(var i=0;i<li.length;i++){
+			if(i%2==0){
+				li[i].style.backgroundColor="green"	;
+			}else{
+				li[i].style.backgroundColor="orange";
+			}
+	
+			}			
+		}
+		for(var i=0;i<li.length;i++){
+		 li[i].addEventListener("mouseover",function(){
+		 		change();
+				this.style.backgroundColor="yellow";
+
+	 		},false);
+		}
+		p.addEventListener("click",function(){
+			change();
+			if(ul.style.display=="none"){
+				ul.style.display="block";
+			}
+			 else{
+			 	ul.style.display="none";
+			 }
+			
+		},false);
+	}
+	</script>
+</head>
+<body>
+	<div class="zbox">
+    <p id="zboxp">输入法</p>
+    <ul id="ul1" style=" display:none;" >
+        <li>手写</li>
+        <li>拼音</li>
+        <li>关闭</li>
+        <li>手写</li>
+        <li>拼音</li>
+        <li>关闭</li>
+        <li>手写</li>
+        <li>拼音</li>
+        <li>关闭</li>
+    </ul>
+    </div>
+</body>
+</html>

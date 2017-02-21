@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>弹性盒模型</title>
+	<style type="text/css">
+		#img{
+			width: 250px;
+
+		}
+		.col{
+			-webkit-column-count: 3;/*分栏*/
+			-webkit-column-rule-style: solid;
+			-webkit-column-rule-color: #9e9e9e;
+			-webkit-column-gap: 20px;
+		}
+		.center{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			background-color: orange;
+			display:-webkit-box;
+			-webkit-box-pack:center;/*水平居中*/
+			-webkit-box-align:center;/*垂直居中*/
+
+
+		}
+		.outer{
+			display:-webkit-box;
+			-webkit-box-pack:center;/*水平居中*/
+			-webkit-box-align:center;/*垂直居中*/
+	
+
+		}
+
+	</style>
+</head>
+<body>
+	<!-- cloumn分栏 -->
+	<div class="col">
+		<img id="img" src="http://06.imgmini.eastday.com/mobile/20161204/35a651bbb02ee6d24ffbe2cec8e09dd2_wmk.jpeg" alt="图片">
+		11月25日，泰国旅游地清迈发生一起打人事件，被打者为难府（府类似于中国的省级行政单位。观察者网注）
+		一名高级将领的儿子。此事件引起了总理巴育上将及副总理巴逸上将的高度重视，7天后（即12月2日），
+		该涉事酒吧被夷为平地。11月25日，泰国旅游地清迈发生一起打人事件，被打者为难府
+		（府类似于中国的省级行政单位。观察者网注）一名高级将领的儿子。此事件引起了总理巴育上将及
+		副总理巴逸上将的高度重视，7天后（即12月2日），该涉事酒吧被夷为平地。
+		11月25日，泰国旅游地清迈发生一起打人事件，被打者为难府（府类似于中国的省级行政单位。
+		观察者网注）一名高级将领的儿子。此事件引起了总理巴育上将及副总理巴逸上将的高度重视，
+		7天后（即12月2日），该涉事酒吧被夷为平地。11月25日，泰国旅游地清迈发生一起打人事件，被打者为难府（府类似于中国的省级行政单位。观察者网注）一名高级将领的儿子。此事件引起了总理巴育上将及副总理巴逸上将的高度重视，7天后（即12月2日），该涉事酒吧被夷为平地。
+	</div>
+	<hr/>
+	<!-- .旧版弹性盒子居中布局 -->
+	<div class="outer">
+		<div class="center">
+		<img width="150px" src="http://06.imgmini.eastday.com/mobile/20161204/35a651bbb02ee6d24ffbe2cec8e09dd2_wmk.jpeg">
+		</div>
+	</div>
+	
+</body>
+</html>

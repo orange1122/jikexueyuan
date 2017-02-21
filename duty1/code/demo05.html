@@ -1,0 +1,29 @@
+</!DOCTYPE html>
+<html>
+<head charset="zh-ch">
+	<meta charset="utf-8">
+	<title>表单验证</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<script type="text/javascript">
+window.onload = function(){
+	
+	document.getElementById("myform").addEventListener("submit",function(){
+		var mytext = document.getElementById("mytext");
+		if(mytext.value==""){
+			alert(mytext.value);
+		}else{
+			this.submit();
+		}
+
+
+	},false);
+	}
+</script>
+<body>
+	<form action="pass.html" method="post"  id="myform" onsubmit="return false">
+		邮箱：<input type="text" name="mytext" id="mytext" class="init">
+		<button type="submit" id="mybut">提交</button>
+	</form>
+</body>
+</html>

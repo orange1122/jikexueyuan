@@ -1,0 +1,82 @@
+</!DOCTYPE html>
+<html>
+<head charset="zn-ch">
+	<meta charset="utf-8">
+	<title>ceshi</title>
+	<style type="text/css">
+	.move{cursor:move;	
+	position:absolute;	
+     width:100px;	height:100px;	background:green;
+   -moz-user-select:none;/*火狐禁止选中*/}
+	</style>
+	<script type="text/javascript">
+
+window.onload=function(){
+	/*var input1 =document.getElementById("input1");
+	input1.addEventListener("click",function(){
+		var li = document.getElementsByTagName('li');
+		for(var i=1;i<=3;i++){
+			console.info(li[i])
+			li[i].getElementsByTagName("input")[0].checked=this.checked;
+		}
+		
+	},false);
+
+	var input2 =document.getElementById("input2");
+	input2.addEventListener("click",function(){
+		var li = document.getElementsByTagName('li');
+		for(var i=6;i<=8;i++){
+			console.info(li[i])
+			li[i].getElementsByTagName("input")[0].checked=this.checked;
+		}
+		
+	},false);*/
+
+	var text=document.getElementsByTagName("input")[0];
+	console.info(parseInt(text.value)+8)
+	var start=document.getElementsByTagName("input")[1];
+	var stop=document.getElementsByTagName("input")[2];
+	var clear=document.getElementsByTagName("input")[3];
+	var time=null;
+	start.onclick=function(){
+		time =setInterval(function(){
+
+		text.value=parseInt(text.value)+1;
+
+	},10);	
+	}
+	stop.addEventListener("click",function(){
+		clearInterval(time);
+	},false);
+	clear.addEventListener("click",function(){
+		clearInterval(time);
+		text.value=0;
+	},false)
+
+		
+	
+}
+	</script>
+}
+</head>
+<body>
+<!-- <ul>
+	<li><input id="input1" type="checkbox" /><strong>设计部</strong></li>
+	<li><input type="checkbox" />张三</li>
+	<li><input type="checkbox" />李四</li>
+	<li><input type="checkbox" />王五</li>
+	<li>
+		<ul>
+			<li><input id="input2" type="checkbox" /><strong>技术部</strong></li>
+			<li><input type="checkbox" />Blue</li>
+			<li><input type="checkbox" />Leo</li>
+			<li><input type="checkbox" />邢风</li>
+		</ul>
+	</li>
+</ul> -->
+<input type="text" value="0" /><input type="button" value="开始计时" />
+<input type="button" value="停止计时" /><input type="button" value="清除计时" />
+<div class="move"></div>
+
+</body>
+</html>

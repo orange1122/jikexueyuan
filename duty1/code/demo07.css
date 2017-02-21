@@ -1,0 +1,5 @@
+  *{ margin:0px; padding:0px; list-style:none;}
+  .zbox{ width:400px; margin:100px auto; }
+  .zboxl { width:100px; height:50px;  float:left; background:#999; color:#333;  }
+  #zboxr{ width:280px; background:#888; float:right;  }
+  #zboxr label { margin-left:22px;}

@@ -1,0 +1,214 @@
+</!DOCTYPE html>
+<html>
+<head charset="zh-ch">
+	<meta charset="utf-8">
+	<title>1</title>
+</head>
+<script type="text/javascript">
+// var a = 3.7E2;
+// document.write("hello world"+"&nbsp"+a);
+
+// h=" "
+// for(var a=1;a<=9;a++){
+// 	for(b=1;b<=a;b++){
+// 		h += a+"*"+b+"="+a*b+" ";
+			
+// 	}
+// 	h+="<br>"
+// }
+// document.write(h);
+
+// var a = new Array("1","2","xiao");
+// for(var i=0;i<a.length;i++){
+// 	document.write(a[i]+" ");
+// }
+window.onload=function(){
+	// var ul = document.getElementById("ul");
+	// var li = ul.getElementsByTagName('li');
+	// console.info(li)
+	// for(i=0;i<li.length;i++){
+	// 	li[i].style.backgroundColor='red';
+	// }
+	
+	/*
+	//动态添加节点
+	 var text = document.getElementById("text");
+	var ul = document.getElementsByTagName('ul');
+	var text = document.getElementById("text");
+	document.getElementById("but").addEventListener("click",function(){
+			
+			
+				var cli = document.createElement("li");
+				cli.innerHTML=text.value;
+		
+				if(text.value==""){
+					alert("空白内容");
+			    }else {
+			    	ul[0].appendChild(cli);//注意appendChild()方法参数不能是字符串，要是节点
+			    }
+		
+	},false);*/
+
+	var text1 = document.getElementById("text1");
+	var text2 = document.getElementById("text2");
+	var butt = document.getElementById("butt");
+	butt.addEventListener("click",function(){
+		alert(eval(text1.value+"+"+text2.value))
+	},false)
+
+	//window.history.back();
+	//window.history.forward();
+	//window.history.go(-1);
+	
+	var  but1  = document.getElementById("but1");
+	var  div1  = document.getElementById("div1");
+	but1.addEventListener("click",function(){
+		if(div1.style.display=='block'){
+			div1.style.display='none';
+		}else{
+			div1.style.display='block'
+		}
+		
+
+	},false);
+
+	document.getElementById("s1").innerHTML="<option>111</option><option>222</option>";
+
+	var num = document.getElementById("num");
+	num.onkeydown=function(){
+		var rex =/^[0-9]+$/;
+		if(rex.test(num.value)){
+			num.style.backgroundColor="green";
+		}
+
+	}
+	/*var obj =new Array("1","2","xiao");
+	var i=0;
+		for(i in obj){
+			alert(obj[i])
+		}
+		*/
+	
+	document.onkeydown=function (ev){
+		var e=ev||event;//兼容性 
+		//alert(e.keyCode);
+		document.getElementById('txt1').value+= "\n"+'数值是'+e.keyCode+'按键是'+String.fromCharCode(e.keyCode);
+	
+}
+
+var getBtn = document.getElementById('btn');
+		
+		getBtn.onclick = function a(){
+				alert('window.location="http://baidu.com"');
+				//window.location='http://baidu.com';
+				window.open('about:blank');
+				
+		}
+		// var element=document.getElementById("h");
+		// element.addEventListener("click",showElement(),true);
+function showElement(){ 
+//h1是一个<h1>标签 
+alert('nodetype:'+element.nodeType);//nodeType=1 
+alert('nodeName:'+element.nodeName); 
+alert('nodeValue:'+element.nodeValue); //null 
+alert('element:'+element); 
+} 
+	var i=0;
+	var box = document.getElementById("box");
+	box.addEventListener("click",function(){
+		var i=0;
+		var time = setInterval(function(){
+			i++;
+			 if(i>20){
+			 	clearInterval(time);
+			 }
+			box.style.backgroundColor=i%2?"green":"red";
+		},1000);
+	
+		//var time = setTimeout(changeBackground(),1000);
+	},false);
+
+	function changeBackground(){
+			i++;
+			if(i<20){
+				box.style.background=i%2?'blue':'red';
+				time  = setTimeout(changeBackground,1000);
+			}
+			else{
+				alert('执行完毕！')
+				clearTimeout(time);
+			}
+		}
+
+	var start = document.getElementById("input1");
+	var stop = document.getElementById("input2");
+	var num=0;
+	var timer;
+	start.onclick=function(){
+		 timer =setInterval(function(){
+			num+=5;
+			document.getElementById("div2").style.marginLeft=num;
+		},10);
+	}
+	stop.onclick=function(){
+		clearInterval(timer);
+	}
+
+	var input3 =document.getElementById("input3");	
+	input3.addEventListener("click",function(){
+		var text3 =document.getElementById("text3");
+		var ul1 = document.getElementById("ul1");
+		var cli1=document.createElement("li");
+		var a1=document.createElement("a");
+		cli1.innerHTML=text3.value;
+		a1.innerHTML="删除";
+		cli1.appendChild(a1);
+		ul1.appendChild(cli1);
+		a1.onclick=function(){
+			ul1.removeChild(this.parentNode);
+		}
+	},false);
+		
+	
+
+}
+
+</script>
+<body>
+
+<input type="text" name="text" id="text">
+<input type="button" name="but" id="but" value="添加">
+	<ul id="ul">
+		
+	
+	</ul>
+<input type="text" id="text1"><br>
+<input type="text" id="text2"><br>
+<input type="button" id="butt" value="求和"><br>
+	
+	<input type="button" id="but1" value="显示隐藏" >
+	<div id="div1" style="width: 100px;height: 100px;color: green; border: 1px solid "></div>
+
+	<select id="s1">
+	</select><br>
+	<input type="text" id="num"><br>
+
+	<textarea id="txt1" rows="10" cols="40">
+	</textarea><br>
+
+	<input id="btn" type="button" value="跳到baidu" onclick=a() /><br>
+	<div id="box" style="width: 100px;height:100px;background-color: #666 "></div><br>
+
+	<input type="button" value="给我跑！" id="input1">
+	<input type="button" value="停！" id="input2">
+	<div id="div2" style="width: 100px;height: 100px;background-color: yellow"></div><br>
+
+	<input type="text" id="text3">
+	<input type="button" id="input3" value="添加Li">
+	<ul id="ul1">
+	
+	</ul>
+
+
+</body>
+</html>
