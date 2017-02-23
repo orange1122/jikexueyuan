@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>jquery</title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<style type="text/css">
+	/*.p{
+		color: red;
+	}*/
+	.blue{
+		color: blue;
+	}
+	.q{
+		font-weight: bold;
+	}
+</style>
+</head>
+<body>
+	<!-- <p id="p" class="p">nihao</p> -->
+	<p id="p" class="blue">欢迎</p>
+	<p class="blue">nihao</p>
+	<a class="blue" href="http://www.baidu.com" target="_blank">百度链接</a>
+	<ul><li>1</li><li>2</li><li>3</li></ul>
+	<button>点击</button>
+	<script type="text/javascript">
+	function f1(){
+
+　　　　var n=999;
+
+　　　　nAdd=function(){n+=1}
+
+　　　　function f2(){
+　　　　　　alert(n);
+　　　　}
+
+　　　　return f2;
+
+　　}
+
+　　var result=f1();
+
+　　result(); // 999
+
+　　nAdd();
+
+　　result(); // 1000
+
+		// function f1(){
+		// 	　　　　var n=999;
+		// 	　　　　function f2(){
+		// 		　　　　　　alert(n);
+		// 	　　　　}
+		// 	　　　　return f2();
+		// 　　}
+
+		// // 　　var result=f1();
+
+		// // 　　result();
+		// f1();
+
+
+		$(function(){
+			$("button").click(function(){
+		// $("ul").empty();
+		// $("p.p").remove();
+		// $("p").remove(".p");
+		// $("p,a").addClass("blue q");
+		// $("p,a").removeClass("blue");
+		$("p,a").toggleClass("blue");
+		
+	});
+		});
+// $(function(){
+// 	// $("button").click(function(){
+// 	// 	$("p").prepend("<b>welcome</b>");
+// 	// 	$("ul").prepend("<li>4</li>");
+// 	// });
+// 	// $("button").click(function(){
+// 	// 	$("ul").append("<li>4</li>");
+// 	// });
+// })
+// $(function(){
+// 	$("button").click(function(){
+// 		$("p").append("welcome");
+// 	});
+// });
+// $(function(){
+// 	$("button").click(function(){
+// 		$("a").attr("href","http://www.runoob.com/jquery");
+// 	});
+// });
+
+// $(function(){
+// 	$("button").click(function(){
+// 		$("p").html("welcome");
+// 	});
+// });
+
+// $(function(){
+// $("button").click(function(){
+// $("#p").css("color","red").slideUp(2000).slideDown(2000);	
+// });
+// });
+
+
+// $(function(){
+// 	$("button").click(a);
+// });
+// function a(){
+// 	$("p:last").hide();
+// }
+// $(function(){
+// 	$("button").click(function(){
+// 		$("p.p").hide();
+// 	})
+// });
+// $(function(){
+// 	$("button").click(function(){
+// 		$("#p").hide();
+// 	});
+// });
+// $(function(){
+// 	$("button").click(function(){
+// 		$("p").hide();
+// 	});
+// });
+</script>
+</body>
+</html>
