@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>登录界面</title>
+	<link rel="stylesheet" href="img/tab_icon.png">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<div class="navbar navbar-default" role="navigation">
+		<button type="button" class="navbar-toggle pull-left animated flip" style="margin-left:10px; margin-right:-10px;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+		<div class="navbar-inner">
+			<a href="index.html" class="navbar-brand">
+				<img src="img/logo.png" alt="logo" class="hidden-xs">
+				<span>极客学院</span>
+			</a>
+		</div>
+		<div class="btn-group pull-right">
+			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">登录</a></li>
+				<li class="divider"></li>
+				<li><a href="login.html">退出</a></li>
+			</ul>
+		</div>
+		<ul style="list-style:none;">
+			<li>
+				<form class="navbar-search pull-left hidden-xs">
+					<!-- 搜索框 -->
+					<input placeholder="Search" class="form-control col-lg-10" name="query" type="text">
+				</form>
+			</li>
+		</ul> 
+	</div>
+	
+	<!-- 主体 -->
+	<div class="ch-container">
+		<div class="row">
+			<!-- 左侧导航栏 -->
+			<div class="col-sm-2 col-lg-2">
+				<div class="sidebar-nav">
+					<div class="nav-canvas">
+						<ul class="nav nav-pills nav-stacked main-menu">
+							<li class="nav-header">导航栏</li>
+							<li class="active"><a href="basicinfo.html"><i class="glyphicon glyphicon-home"></i><span>&nbsp;基本信息</span></a></li>
+							<li><a href="student.html"><i class="glyphicon glyphicon-eye-open"></i><span>&nbsp;学生档案</span></a></li>
+							<li><a href="chart.html"><i class="glyphicon glyphicon-list-alt"></i><span>&nbsp;图表数据</span></a></li>
+							<li><a href="typography.html"><i class="glyphicon glyphicon-font"></i><span>&nbsp;公告发布</span></a></li>
+							<li><a href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span>&nbsp;相册管理</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-10 col-sm-10">
+				<!-- 顶部导航栏 -->
+				<div>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">主页</a>
+						</li>
+						<li>
+							<a href="#">基本信息</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 极客学院概况 -->
+				<div class=" row">
+					<div class="col-lg-3 col-xs-6">
+						<a data-toggle="tooltip" title="6 new members." class="well top-block" href="#">
+							<i class="glyphicon glyphicon-user blue"></i>
+							<div>学员总数</div>
+							<div>10000</div>
+							<span class="notification">6</span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<a data-toggle="tooltip" title="4 new pro members." class="well top-block" href="#">
+							<i class="glyphicon glyphicon-star green"></i>
+							<div>教师总数</div>
+							<div>500</div>
+							<span class="notification green">4</span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<a data-toggle="tooltip" title="$34 new sales." class="well top-block" href="#">
+							<i class="glyphicon glyphicon-shopping-cart yellow"></i>
+							<div>年度收益</div>
+							<div>$1000000</div>
+							<span class="notification yellow">$23333</span>
+						</a>
+					</div>
+					<div class="col-lg-3 col-xs-6">
+						<a data-toggle="tooltip" title="12 new messages." class="well top-block" href="#">
+							<i class="glyphicon glyphicon-envelope red"></i>
+							<div>消息</div>
+							<div>25</div>
+							<span class="notification red">12</span>
+						</a>
+					</div>
+				</div>
+				<!-- 极客学院简介 -->
+				<div class="row">
+					<div class="box col-md-12">
+						<div class="box-inner">
+							<div class="box-header well">
+								<h2><i class="glyphicon glyphicon-info-sign"></i> 简介</h2>
+								<div class="box-icon">
+									<a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+									<a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+									<a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+								</div>
+							</div>
+							<div class="box-content row">
+								<div class="col-lg-12">
+									<h1>极客学院 <br><small>让编程成为一种信仰</small></h1>
+									<p>极客学院是IT职业教育线上新型大学。由联合创始人靳岩、姚尚朗创立于北京中关村。致力于“让IT学习更有效”，以实战为特色，为注重自我提升的IT从业者提供高品质职业教育。极客学院职业培训涵盖前端，后端，移动全品类。Web、Java、Python、Go、iOS、Android、PHP等各学科依据职业需求设计课程，根据个人学习计划提供视频、图文、答疑、一对一作业批改、推荐就业等服务。极客学院是业界课程更新速度最快、涵盖范围最广、技术内容最新的IT职业教育平台。创下7小时极速发布最新技术内容的纪录，垄断了中国大陆几乎所有最新技术和最热应用课程的首发。学院提供超过2500门IT技术课程，10000以上课时设置，累计学习用户超过300万。
+									</p>
+									<p><b>中国IT职业在线教育第一品牌。</b></p>
+									<p class="center-block download-buttons">
+										<a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-chevron-left glyphicon-white"></i>&nbsp;上一篇文章</a>
+										<a href="http://usman.it/free-responsive-admin-template/" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;文章下载</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 标签页样式 -->
+				<div class="row">
+					<div class="box col-lg-4">
+						<div class="box-inner homepage-box">
+							<div class="box-header well">
+								<h2><i class="glyphicon glyphicon-th"></i>&nbsp;标签页</h2>
+								<div class="box-icon">
+									<a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+									<a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+									<a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+								</div>
+							</div>
+							<div class="box-content">
+								<ul class="nav nav-tabs" id="myTab">
+									<li class="active"><a href="#info">信息</a></li>
+									<li><a href="#custom">自定义</a></li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div class="tab-pane active" id="info">
+										<h3>极客学院<small>IT职业在线教育</small></h3>
+										<p>让你实现IT梦想！</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 学员简介 -->
+					<div class="box col-lg-4">
+						<div class="box-inner homepage-box">
+							<div class="box-header well" data-original-title="">
+								<h2><i class="glyphicon glyphicon-user"></i>&nbsp;学员简介</h2>
+								<div class="box-icon">
+									<a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+									<a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+								</div>
+							</div>
+							<div class="box-content">
+								<div class="box-content">
+									<ul class="dashboard-list">
+										<li>
+											<a href="#"><img class="dashboard-avatar" alt="张少龙" src="img/zsl.png"></a>
+											<strong>姓名:</strong> <a href="#">张少龙</a>
+											<br>
+											<strong>加入时间:</strong> 10/01/2012
+											<br>
+											<strong>状态:</strong> <span class="label-success label label-default">优秀</span>
+										</li>
+										<li>
+											<a href="#"><img class="dashboard-avatar" alt="杨帆" src="img/yf.png"></a>
+											<strong>姓名:</strong> <a href="#">杨帆</a>
+											<br>
+											<strong>加入时间:</strong> 11/02/2015
+											<br>
+											<strong>状态:</strong> <span class="label-warning label label-default">及格</span>
+										</li>
+										<li>
+											<a href="#"><img class="dashboard-avatar" alt="朱华宇" src="img/zhy.png"></a>
+											<strong>姓名:</strong> <a href="#">朱华宇</a>
+											<br>
+											<strong>加入时间:</strong> 20/02/2010
+											<br>
+											<strong>状态:</strong> <span class="label-default label label-danger">重修</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 邮件地址 -->
+					<div class="box col-lg-4">
+						<div class="box-inner homepage-box">
+							<div class="box-header well" data-original-title="">
+								<h2><i class="glyphicon glyphicon-list-alt"></i>&nbsp;联系方式</h2>
+								<div class="box-icon">
+									<a href="#" class="btn btn-minimize btn-round btn-default"><i class="glyphicon glyphicon-chevron-up"></i></a>
+									<a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+								</div>
+							</div>
+							<div class="box-content">
+								<h3 style="margin-left:15px;">输入邮件地址，系统自动发送通知邮件</h3>
+								<div class="mc_embed_signup">
+									<form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+										<div>
+											<label>请输入邮件地址</label>
+											<input type="email" value="" name="EMAIL" class="email" placeholder="邮件地址" required="">
+											<div class="power_field">
+												<input type="text" tabindex="-1" value="">
+											</div>
+											<div class="clear">
+												<input type="submit" value="提交" name="subscribe" class="button">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/charisma.js"></script>
+</body>
+</html>

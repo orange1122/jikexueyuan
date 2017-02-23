@@ -1,0 +1,41 @@
+h1{
+	text-align: center;
+}
+.clearfix{
+	height: 10px;
+}
+.container{
+	margin-top: 150px;
+}
+
+.navbar-brand img{
+	height: 20px;
+	width: 20px;
+	float: left;
+}
+.navbar-brand span{
+	float: left;
+}
+.ch-container{
+	margin-left: 20px;
+}
+.sidebar-nav .active .nav-canvas {
+    left: -20px;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+}
+@media only screen and (max-width: 767px) {
+    .sidebar-nav .nav-canvas {
+        top: 0px;
+        left: -90%;
+        position: absolute;
+        width: 80%;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 0 !important;
+        border-radius: 0 0 20px 0;
+        padding-bottom: 10px;
+        will-change: left;
+        /*display: none;*/
+    }
+}
