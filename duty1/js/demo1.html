@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>优等生计算方法</title>
+</head>
+
+<body>
+    <input type="text" id="num">=
+    <span id="reslut"></span>
+    <button onclick="calc()">查询</button>
+    <script type="text/javascript">
+
+    function calc() {
+        var numvalue = document.getElementById("num").value;
+        if(!numvalue){
+            alert("请输入查询内容");
+
+        }
+        var m = parseInt(numvalue / 10);
+        console.info(m);
+        var reslut = jisuan(m);
+        document.getElementById("reslut").innerText = reslut;
+    }
+
+    function jisuan(m) {
+        switch (m) {
+            case 10:
+             
+                return "该生为一等生";
+                break;
+            case 9:
+                document.write("该生为一等生");
+                break;
+            case 8:
+                document.write("该生为二等生");
+                break;
+            case 7:
+                document.write("该生为三等生");
+                break;
+            case 6:
+                document.write("该生为四等生");
+                break;
+            case 5:
+                document.write("该生为五等生");
+                break;
+            case 4:
+                document.write("该生为六等生");
+                break;
+            case 3:
+                document.write("该生为七等生");
+                break;
+            case 2:
+                document.write("该生为八等生");
+                break;
+            case 1:
+                document.write("该生为九等生");
+                break;
+            case 0:
+                document.write("该生为十等生");
+                break;
+            default:
+
+                document.write("不合法输入");
+                break;
+        }
+    }
+    </script>
+</body>
+
+</html>

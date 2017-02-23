@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>js内置对象</title>
+</head>
+<script type="text/javascript">
+	function person(name,age,height){
+			this.name=name;
+			this.age=age;
+			this.height=height;
+	}
+
+	var mybrother = new person("张三",12,123);
+	//alert(mybrother.name+" "+mybrother.age+" "+mybrother.height);
+
+	for(temp in mybrother){
+		//document.write(mybrother[temp]);
+	}
+
+	function start(){
+		setTimeout(function(){
+			alert("你好");
+		},2000);
+	}
+</script>
+<body>
+<button type="button" onclick="start()">点击</button>
+</body>
+</html>
