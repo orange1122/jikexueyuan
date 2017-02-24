@@ -1,0 +1,38 @@
+#header {
+  color: #4D926F;
+}
+h2 {
+  color: #4D926F;
+}
+#header {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+#footer {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#header p {
+  font-size: 12px;
+}
+#header p a {
+  text-decoration: none;
+}
+#header p a:hover {
+  border-width: 1px;
+}
+#header {
+  color: #333333;
+  border-left: 1px;
+  border-right: 2px;
+}
+#footer {
+  color: #114411;
+  border-color: #7d2717;
+}
