@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>前端面试题总结</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>高级前端面试题总结</h2>
+	<div class="head">
+		<span>HTML&CSS：</span>
+	    对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、
+	    HTML5、CSS3、Flexbox <br/>
+
+		<span>JavaScript:</span>
+	    数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、
+	    DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 6、Nodejs<br/>
+
+		<span>其他：</span>
+	    移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力<br/>
+	    <div class="header">
+		    <span>作为一名前端工程师，无论工作年头长短都应该掌握的知识点：</span>
+		    1、DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。<br/>
+		    2、DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。<br/>
+		    3、事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。<br/>
+		    4、XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。<br/>
+		    5、严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。<br/>
+		    6、盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型<br/>
+		    7、块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们<br/>
+		    8、浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。<br/>
+		    9、HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。<br/>
+		    10、JSON —— 作用、用途、设计结构。<br/>
+	    </div>
+	</div>
+	<div class="main">
+		<h2>HTML</h2>
+		 <span>Doctype作用？标准模式与兼容模式各有什么区别?</span>
+
+		 （1）、<!DOCTYPE>声明位于位于HTML文档中的第一行，处于 <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。<br/>
+		（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。<br/>
+		<span>HTML5 为什么只需要写 <!DOCTYPE HTML>？</span>
+
+		 HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；<br/>
+		 而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。<br/>
+		<span>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</span>
+
+		首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。<br/>
+
+		（1）行内元素有：a b span img input select strong（强调的语气）<br>
+		（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p <br/>
+
+		（3）常见的空元素：<br/>
+		    br hr img input link meta
+		    鲜为人知的是：<br/>
+		    area base col command embed keygen param source track wbr
+		<span>页面导入样式时，使用link和@import有什么区别？</span>
+
+		（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;<br>
+
+		（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br>
+
+		（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;<br>
+		<span>介绍一下你对浏览器内核的理解？</span>
+
+		主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br>
+		渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。<br>
+
+		JS引擎则：解析和执行javascript来实现网页的动态效果。<br>
+
+		<span>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
+		常见的浏览器内核有哪些？</span>
+
+		Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]
+		Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等
+		Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]
+		Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
+		详细文章：浏览器内核的解析和对比
+
+
+		<span>如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素
+		简述一下你对HTML语义化的理解？</span>
+
+		用正确的标签做正确的事情。
+		html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
+		即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;
+		搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;
+		使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+		<span>HTML5的离线储存怎么使用，工作原理能不能解释一下？</span>
+
+		在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。
+		原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
+
+		如何使用：
+		1、页面头部像下面一样加入一个manifest的属性；
+		2、在cache.manifest文件的编写离线存储的资源；
+		    CACHE MANIFEST
+		    #v0.11
+		    CACHE:
+		    js/app.js
+		    css/style.css
+		    NETWORK:
+		    resourse/logo.png
+		    FALLBACK:
+		    / /offline.html
+		3、在离线状态时，操作window.applicationCache进行需求实现。
+		详细的使用请参考：有趣的HTML5：离线存储
+
+		<span>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</span>
+
+		在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
+		离线的情况下，浏览器就直接使用离线存储的资源。
+		详细的使用请参考：有趣的HTML5：离线存储
+
+		<span>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span>
+
+		cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
+		cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+		sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+
+		存储大小：
+		    cookie数据大小不能超过4k。
+		    sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
+
+		有期时间：
+		    localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
+		    sessionStorage  数据在当前浏览器窗口关闭后自动删除。
+		    cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+		<span>iframe有那些缺点？</span>
+
+		*iframe会阻塞主页面的Onload事件；
+		*搜索引擎的检索程序无法解读这种页面，不利于SEO;
+
+		*iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+
+		使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+		动态给iframe添加src属性值，这样可以绕开以上两个问题。
+
+		<span>HTML5的form如何关闭自动完成功能？</span>
+
+		给不想要提示的 form 或某个 input 设置为 autocomplete=off。
+		<span>如何实现浏览器内多个标签页之间的通信? (阿里)</span>
+
+		WebSocket、SharedWorker；
+		也可以调用localstorge、cookies等本地存储方式；
+
+		localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，
+		我们通过监听事件，控制它的值来进行页面信息通信；
+		注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
+		<span>webSocket如何兼容低浏览器？(阿里)</span>
+
+		Adobe Flash Socket 、
+		ActiveX HTMLFile (IE) 、
+		基于 multipart 编码发送 XHR 、
+		基于长轮询的 XHR
+		<span>页面可见性（Page Visibility API） 可以有哪些用途？</span>
+
+		通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
+		在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+		<span>如何在页面上实现一个圆形的可点击区域？</span>
+
+		1、map+area或者svg
+		2、border-radius
+		3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+		<h2>css</h2>
+		<span>介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</span>
+		（1）有两种， IE 盒子模型、W3C 盒子模型；<br>
+		（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；<br>
+		（3）区  别： IE的content部分把 border 和 padding计算了进去;<br>
+		<span>为什么要初始化CSS样式。</span>
+  		因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br>
+		 当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<br>
+		<span>什么是CSS 预处理器 / 后处理器？</span>
+		预处理器例如：LESS、Sass、Stylus，用来预编译Sass或less，增强了css代码的复用性，
+  		还有层级、mixin、变量、循环、函数等，具有很方便的UI组件模块化开发能力，极大的提高工作效率。<br>
+		后处理器例如：PostCSS，通常被视为在完成的样式表中根据CSS规范处理CSS，让其更有效；目前最常做的
+  		是给CSS属性添加浏览器私有前缀，实现跨浏览器兼容性的问题。
+  		<span>如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</span>
+		多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔为1/60＊1000ms ＝ 16.7ms
+		<h2>JavaScript</h2>
+		<span>介绍js的基本数据类型。</span>
+ 		Undefined、Null、Boolean、Number、String、Symbol(new in ECMAScript 2015)
+ 		<span>介绍js有哪些内置对象？</span>
+		Object 是 JavaScript 中所有对象的父对象<br>
+		数据封装类对象：Object、Array、Boolean、Number 和 String <br>
+		其他对象：Function、Arguments、Math、Date、RegExp、Error <br>
+		<span>JavaScript原型，原型链 ? 有什么特点？</span>
+		每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，<br>
+		如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，<br>
+		于是就这样一直找下去，也就是我们平时所说的原型链的概念。<br>
+		关系：instance.constructor.prototype = instance.__proto__ <br>
+		特点：<br>
+		JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。<br>
+ 		当我们需要一个属性的时，Javascript引擎会先看当前对象中是否有这个属性， 如果没有的话，<br>
+ 		就会查找他的Prototype对象是否有这个属性，如此递推下去，一直检索到 Object 内建对象。
+		<span>Javascript作用链域?</span>
+		全局函数无法查看局部函数的内部细节，但局部函数可以查看其上层的函数细节，直至全局细节。<br>
+		当需要从局部函数查找某一属性或方法时，如果当前作用域没有找到，就会上溯到上层作用域查找，<br>
+		直至全局函数，这种组织形式就是作用域链。<br>
+		<span>谈谈This对象的理解。</span>
+		this总是指向函数的直接调用者（而非间接调用者）；<br>
+		如果有new关键字，this指向new出来的那个对象；<br>
+		在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；<br>
+		<span>Jquery与jQuery UI 有啥区别？</span>
+		*jQuery是一个js库，主要提供的功能是选择器，属性修改和事件绑定等等。<br>
+		*jQuery UI则是在jQuery的基础上，利用jQuery的扩展性，设计的插件。
+ 		提供了一些常用的界面元素，诸如对话框、拖动行为、改变大小行为等等 <br>
+ 		<span>那些操作会造成内存泄漏？</span>
+		内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。<br>
+		垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+		setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。<br>
+		闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）
+	</div>
+	
+
+	</div>
+</body>
+</html>
